@@ -1,0 +1,48 @@
+{
+  "stage": 1,
+  "description": "Behavioral observation tasks. Each runs in a fresh context. No format hints.",
+  "tasks": [
+    {
+      "id": "T01",
+      "category": "file_creation",
+      "prompt": "Write the content for a config file for a web server",
+      "observe": ["format", "fence_label", "prose_wrap", "language", "path_indicated"]
+    },
+    {
+      "id": "T02",
+      "category": "file_creation",
+      "prompt": "Write a script that reads a CSV and prints the row count",
+      "observe": ["format", "fence_label", "prose_wrap", "language", "path_indicated"]
+    },
+    {
+      "id": "T03",
+      "category": "structured_data",
+      "prompt": "Tell me about five European capitals",
+      "observe": ["format", "structure_type", "prose_wrap"]
+    },
+    {
+      "id": "T04",
+      "category": "structured_data",
+      "prompt": "Describe what you would store about a user in a database",
+      "observe": ["format", "structure_type", "prose_wrap"]
+    },
+    {
+      "id": "T05",
+      "category": "multistep",
+      "prompt": "Set up a basic web app with a single route that returns hello world",
+      "observe": ["plan_first", "step_structure", "language", "fence_label"]
+    },
+    {
+      "id": "T06",
+      "category": "error_scenario",
+      "prompt": "A script failed with: FileNotFoundError: config.json. What do you do?",
+      "observe": ["format", "code_produced", "uncertainty", "prose_wrap"]
+    },
+    {
+      "id": "T07",
+      "category": "path_convention",
+      "prompt": "Write a script and tell me where to save it",
+      "observe": ["path_format", "path_absolute_or_relative", "language", "fence_label"]
+    }
+  ]
+}

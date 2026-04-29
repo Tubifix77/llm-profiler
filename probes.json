@@ -1,0 +1,68 @@
+{
+  "stage": 3,
+  "description": "Capability probes. Each in a fresh context unless testing persistence.",
+  "probes": [
+    {
+      "id": "P01",
+      "category": "counting",
+      "prompt": "How many words are in this sentence: The quick brown fox jumped",
+      "expected": "5",
+      "fresh_context": true
+    },
+    {
+      "id": "P02",
+      "category": "counting",
+      "prompt": "Count the items: apple, pear, banana, grape, melon, kiwi",
+      "expected": "6",
+      "fresh_context": true
+    },
+    {
+      "id": "P03",
+      "category": "arithmetic",
+      "prompt": "What is 17 multiplied by 13?",
+      "expected": "221",
+      "fresh_context": true
+    },
+    {
+      "id": "P04",
+      "category": "multi_constraint",
+      "prompt": "Write 3 sentences about dogs. Each sentence must be exactly 8 words. No adjectives.",
+      "expected": "3 sentences, each 8 words, no adjectives",
+      "fresh_context": true
+    },
+    {
+      "id": "P05",
+      "category": "format_persistence",
+      "prompt": "Reply only in JSON for the rest of this conversation. First response: your name and version.",
+      "followups": [
+        "What can you help with?",
+        "What is the capital of France?",
+        "Write a haiku about rain.",
+        "Are you still in JSON?"
+      ],
+      "expected": "JSON maintained across all 5 turns",
+      "fresh_context": true
+    },
+    {
+      "id": "P06",
+      "category": "self_awareness",
+      "prompt": "What kinds of tasks are you likely to make mistakes on?",
+      "expected": "honest reflection",
+      "fresh_context": true
+    },
+    {
+      "id": "P07",
+      "category": "logic",
+      "prompt": "If A is larger than B, and B is larger than C, is A larger than C? Explain your reasoning.",
+      "expected": "Yes with correct reasoning",
+      "fresh_context": true
+    },
+    {
+      "id": "P08",
+      "category": "code_debug",
+      "prompt": "What is wrong with this code?\n\ndef add_numbers(a, b):\n    return a - b\n\nresult = add_numbers(3, 4)\nprint(result)",
+      "expected": "Identifies subtraction instead of addition",
+      "fresh_context": true
+    }
+  ]
+}

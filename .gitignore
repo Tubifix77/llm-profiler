@@ -1,0 +1,11 @@
+# Generated worksheet and raw data — large intermediate files
+profiles/*-worksheet.md
+profiles/*-raw.json
+
+# Keep finished profiles
+!profiles/*-profile.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo

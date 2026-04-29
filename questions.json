@@ -1,0 +1,41 @@
+{
+  "stage": 2,
+  "description": "Preference elicitation. Run in a single continuous conversation after Stage 1.",
+  "questions": [
+    {
+      "id": "Q01",
+      "topic": "structured_output",
+      "prompt": "When you need to return structured data, what format do you naturally reach for and why?"
+    },
+    {
+      "id": "Q02",
+      "topic": "fence_label",
+      "prompt": "When you write code in a code block, what language tag do you put on the fence?"
+    },
+    {
+      "id": "Q03",
+      "topic": "prose_wrapping",
+      "prompt": "When you return a block of code or structured data, do you add explanation around it or return the block alone?"
+    },
+    {
+      "id": "Q04",
+      "topic": "path_convention",
+      "prompt": "When you write a file for someone, how do you indicate where it should be saved?"
+    },
+    {
+      "id": "Q05",
+      "topic": "planning_style",
+      "prompt": "When given a complex task, do you prefer to plan it out first or work through it step by step as you go?"
+    },
+    {
+      "id": "Q06",
+      "topic": "uncertainty",
+      "prompt": "When you are not sure about something, how do you signal that?"
+    },
+    {
+      "id": "Q07",
+      "topic": "format_persistence",
+      "prompt": "If I ask you to use a specific format for the rest of a conversation, will you maintain it throughout or might you drift back to your defaults?"
+    }
+  ]
+}
